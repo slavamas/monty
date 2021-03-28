@@ -76,8 +76,11 @@ class Montyfile:
                     elif tup[ind -1] == 'i':
                         for v in tup[ind]:
                             icounter = 0
+                            if v[0] == '-' or v[0] == '+':
+                                #it's OK to be either positive or negative
+                                pass
                             for vi in range(0,len(v)):
-                                if v[vi] == '-' or v[vi] == '+':
+                                if v[vi] == '.':
                                     #it's OK to be either positive or negative
                                     tstatus.append(0)
                                     icounter +=1
@@ -88,7 +91,7 @@ class Montyfile:
                                     print(f"Provided parameter: {tup[ind]} claimed to be an integer, but it is not")
                                     tstatus.append(1)
                                     return tstatus
-                            if icounter > 1:
+                            if icounter != 0:
                                 print(f"Provided element: {tup[ind]} is not proper integer")
                                 tstatus.append(1)
                                 return tstatus
