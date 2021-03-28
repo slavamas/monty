@@ -293,11 +293,13 @@ class Montydb:
                         #Python could really learn from Erlang... :(
                         for v in tup[ind]:
                             icounter = 0
+                            if v[0] == '-' or v[0] == '+':
+                                #it's OK to be either positive or negative
+                                pass
                             for vi in range(0,len(v)):
-                                if v[vi] == '-' or v[vi] == '+':
-                                    #it's OK to be either positive or negative
-                                    tstatus.append(0)
+                                if v[vi] == '.':
                                     icounter +=1
+                                    tstatus.append(0)
                                 elif v[vi].isdigit():
                                     #it is most likely an integer
                                     tstatus.append(0)
@@ -305,7 +307,7 @@ class Montydb:
                                     print(f"Provided parameter: {tup[ind]} claimed to be an integer, but it is not")
                                     tstatus.append(1)
                                     return tstatus
-                            if icounter > 1:
+                            if icounter != 0:
                                 print(f"Provided element: {tup[ind]} is not proper integer")
                                 tstatus.append(1)
                                 return tstatus
