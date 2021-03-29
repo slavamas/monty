@@ -4,7 +4,7 @@ Monty is python module. It provides mechanism for persistent data storage saving
 below are test files for montydb and montyfile modules:
 testing db module:  
 testmontydb.py  
-##
+#####  
 from montydb import  Montydb as monty 
 
 dbname = 'attributes'  
@@ -93,10 +93,10 @@ id | attr_type | attr_name | attr_value_type | attr_value|
 
 sqlite> .quit  
   
-#############  
+#############   
 testing file module:  
 testmontyfile.py  
-##  
+#####  
 from montyfile import  Montyfile as monty  
   
 fi = 'attributes'  
