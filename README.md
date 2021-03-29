@@ -83,12 +83,13 @@ Enter ".help" for usage hints.
 sqlite> .header on  
 sqlite> .mode column  
 sqlite> select * from attributes;  
-*id  attr_type  attr_name  attr_value_type  attr_value       
-*--- -------------------------------------------------------    
-*1   s          attr1      i                 -23                 
-*2   s          attr2      f                33.77                
-*3   s          attr3      s                attr_val3          
-*4   s          attr4      s                https://whatever.io<br/>
+id | attr_type | attr_name | attr_value_type | attr_value|       
+---|-----------|-----------|-----------------|-----------|  
+1  | s         | attr1     | i               |  -23                 
+2  | s         | attr2     | f               | 33.77                
+3  | s         | attr3     | s               | attr_val3          
+4  | s         | attr4     | s               | https://whatever.io  
+
 sqlite> .quit  
   
 #############  
