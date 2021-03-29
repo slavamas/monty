@@ -77,18 +77,18 @@ No such record: ('s', 'attr5', 'f', '345.567') in the database: attributes
 removing non existing attribute: -1  
   
 ###############  
-sqlite3 attributes   
+sqlite3 attributes  
 SQLite version 3.34.1 2021-01-20 14:10:07  
 Enter ".help" for usage hints.  
 sqlite> .header on  
 sqlite> .mode column  
-sqlite> select * from attributes; 
-id  attr_type  attr_name  attr_value_type  attr_value       
---- -------------------------------------------------------    
-1   s          attr1      i                 -23                 
-2   s          attr2      f                33.77                
-3   s          attr3      s                attr_val3          
-4   s          attr4      s                https://whatever.io<br/>
+sqlite> select * from attributes;  
+*id  attr_type  attr_name  attr_value_type  attr_value       
+*--- -------------------------------------------------------    
+*1   s          attr1      i                 -23                 
+*2   s          attr2      f                33.77                
+*3   s          attr3      s                attr_val3          
+*4   s          attr4      s                https://whatever.io<br/>
 sqlite> .quit  
   
 #############  
