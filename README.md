@@ -1,6 +1,7 @@
 # monty
-Persistent data storage. Stores data either in plain text file or in sqlite DB.
+Monty is python module. It provides persistent data storage saving data either in plain text file or in sqlite DB.
 ####
+test file:
 testmontydb.py
 ##
 from montydb import  Montydb as monty 
@@ -38,6 +39,8 @@ print(f"all_attributes: {mdb.showAll(dbname)}")
 tupl5 = ('s','attr5','f','345.567')  
 print(f"removing non existing attribute: {mdb.remove(tupl5,dbname)}")  
 #####  
+running testmontydb.py:
+
 python testmontydb.py   
 mdb: <montydb.Montydb object at 0x10116f9a0>  
 mdb.sname: attributes  
@@ -79,13 +82,13 @@ SQLite version 3.34.1 2021-01-20 14:10:07
 Enter ".help" for usage hints.  
 sqlite> .header on  
 sqlite> .mode column  
-sqlite> select * from attributes;  
-id  attr_type  attr_name  attr_value_type  attr_value         
---  ---------  ---------  ---------------  -------------------  
-1   s          attr1      i                -23                
-2   s          attr2      f                33.77              
+sqlite> select * from attributes; 
+id  attr_type  attr_name  attr_value_type  attr_value       
+--- -------------------------------------------------------    
+1   s          attr1      i                 -23                 
+2   s          attr2      f                33.77                
 3   s          attr3      s                attr_val3          
-4   s          attr4      s                https://whatever.io
+4   s          attr4      s                https://whatever.io<br/>
 sqlite> .quit  
   
 #############  
