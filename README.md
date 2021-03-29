@@ -1,7 +1,7 @@
 # monty
 Monty is python module. It provides mechanism for persistent data storage saving data either in plain text file or in sqlite DB.
 ####
-below are test files for montydb and montyfile modules:
+below are test files for montydb and montyfile modules:  
 testing db module:  
 testmontydb.py  
 #####  
